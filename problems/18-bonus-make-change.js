@@ -56,7 +56,12 @@ combinations.
 ***********************************************************************/
 
 function makeBetterChange(target, coins = [25, 10, 5, 1]) {
-  // Your code here 
+  let penny = 1
+  let nickel = 5
+  let dime = 10
+  let quarter = 25
+
+  
 }
 
 
