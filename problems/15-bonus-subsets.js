@@ -17,9 +17,16 @@ Hint: For subsets([1, 2, 3]), there are two kinds of subsets:
 ***********************************************************************/
 
 const subsets = (arr) => {
-  // Your code here 
-}
+  if(arr.length === 0) {
+    return [[]]
+  } 
 
+  let last = arr.slice(-1)
+  let ans = subsets(arr.slice(0, -1))
+  return ans.concat(ans.map(x => x.concat(last)))
+  
+}
+console.log(subsets([1, 2]))
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = subsets;
