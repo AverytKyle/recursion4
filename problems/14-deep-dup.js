@@ -35,7 +35,16 @@ console.log(x[0] === y[0]) // true
 
 
 function deepDup(arr) {
-  // Your code here 
+   if (typeof arr !== 'object') {
+    return arr
+   }
+   let dupe = []
+
+   for (let i in arr) {
+    let el = arr[i]
+    dupe[i] = deepDup(el)
+   }
+   return dupe
 }
 
 
